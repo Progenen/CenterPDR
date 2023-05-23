@@ -13,7 +13,7 @@
 // Перевод из px в rem
 
 @function rem($size) {
-  @return calc($size / 16)+rem
+  @return calc($size / 14)+rem
 }
 
 @mixin adaptiveValue($property, $startSize, $minSize, $type) {
@@ -65,14 +65,20 @@
 }
 
 // Fonts
-@include font-face('Bitter', '../fonts/Bitter/Bitter-Bold', bold, normal, ttf);
-@include font-face('Bitter', '../fonts/Bitter/Bitter-Regular', 400, normal, ttf);
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Bold', bold, normal, ttf);
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Regular', 400, normal, ttf);
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Medium', 500, normal, ttf);
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Semibold', 600, normal, ttf);
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Extrabold', 800, normal, ttf);
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Light', 300, normal, ttf);
 
 // Vars
 
-$braun: #005B24;
-$braunHover: #275e3d;
-$milk: #F5F5F5;
+$color1: #1D1F26;
+$color2: #ECF3FF;
+$color3: #8690A0;
+$color4: #64BD48;
+
 
 // Путь к спрайту для конкатенации
 

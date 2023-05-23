@@ -21,7 +21,7 @@ const dir = 'dist/assets/template'; // Output | Папка с конечными
 function browsersync() {
     browserSync.init({
         server: {
-            baseDir: 'dist/',
+            baseDir: 'dist/assets/template/',
             index: "index.html"
         }
     });
@@ -47,7 +47,7 @@ function html() {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(dest('dist/'))
+        .pipe(dest('dist/assets/template'))
 }
 
 // Сборка JS модулей с помощью webpack | Building JS modules using webpack

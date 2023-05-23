@@ -3,17 +3,19 @@
 }
 
 html {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 body {
     padding: 0;
     margin: 0;
-    font-family: Bitter;
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     overflow-x: hidden;
     position: relative;
+    background-color: $color1;
+    color: $color2;
 }
 
 a {
@@ -36,4 +38,55 @@ a {
 
 footer {
     flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1470px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+}
+
+.title {
+    font-weight: 900;
+    font-size: rem(80);
+    &--medium {
+        font-size: rem(50); 
+        line-height: rem(50);
+    }
+    &--light {
+        font-weight: 300;
+    }
+    &--small {
+        font-size: rem(32);
+    }
+}
+
+.posttitle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+
+p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    color: #8690A0;
+
+}
+
+section {
+    padding: 150px 0;
 }

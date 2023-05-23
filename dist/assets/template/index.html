@@ -1,4 +1,60 @@
-@@include('./parts/header.html'})
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Name | Development Version</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="container header__container">
+                    <div class="row">
+                        <div class="header__col header__col--logo">
+                            <a href="#" class="header__logo">
+                                <img src="images/logo.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="header__col header__col--menu">
+                            <nav class="header__menu header-menu">
+                                <ul class="header-menu__list">
+                                    <li class="header-menu__item active"><a href="/#offer" class="header-menu__link">Как это работает</a></li>
+                                    <li class="header-menu__item"><a href="" class="header-menu__link">Портфолио</a></li>
+                                    <li class="header-menu__item"><a href="/#price" class="header-menu__link">Цены</a></li>
+                                    <li class="header-menu__item"><a href="" class="header-menu__link">Отзывы</a></li>
+                                    <li class="header-menu__item"><a href="" class="header-menu__link">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header__col header__col--contacts">
+                            <div class="header__contacts header-contacts">
+                                <ul class="header-contacts__list">
+                                    <li class="header-contacts__item"><a href="#" class="header-contacts__link">
+                                        <svg>
+                                            <use xlink:href='svg/stack/sprite.svg#whatsup'></use>
+                                        </svg>
+                                    </a></li>
+                                    <li class="header-contacts__item"><a href="#" class="header-contacts__link">
+                                        <svg>
+                                            <use xlink:href='svg/stack/sprite.svg#telegram'></use>
+                                        </svg>
+                                    </a></li>
+                                </ul>
+                                <a href="tel:+79217160888" class="header-contacts__phone">+7 (921) 716 - 08 - 88</a>
+                            </div>
+                        </div>
+                        <div class="header__col--burger">
+                            <div class="header__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
 <section id="offer" class="offer">
     <div class="container">
         <div class="offer__top">
@@ -77,4 +133,8 @@
 </section>
 
 </div>
-@@include('./parts/footer.html')
+<footer class="footer">
+<script src="js/bundle.js"></script>
+</body>
+
+</html>

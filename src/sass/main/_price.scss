@@ -1,0 +1,92 @@
+.price {
+    background-image: url('../images/graphics/price-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    &__title {
+        margin-bottom: 17px;
+        line-height: 100px;
+
+    }
+
+    &__subtitle {
+    }
+
+    &__form {
+    }
+}
+.price-form {
+    margin-top: rem(100);
+    display: flex;
+    justify-content: center;
+    [name="file"] {
+        display: none;
+    }
+    &__file {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 280px;
+        width: 100%;
+        cursor: pointer;
+        input {
+            display: none;
+        }
+        label { 
+        }
+        svg {
+            fill: $color2;
+        }
+    }
+
+    &__input {
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(12px);
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 12px;
+        color: #ECF3FF;
+        opacity: 0.6;
+        padding: 22px 24px;
+        border: none;
+        font-family: Gilroy;
+        transition: .3s;
+        border: 1px solid transparent;
+        margin-right: 24px;
+        &::placeholder {
+            font-family: Gilroy;
+            color: #ECF3FF;
+            font-size: 14px;
+        }
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+
+        }
+        &:focus {
+            outline: none;
+            border: 1px solid $color2;
+        }
+    }
+
+    &__btn {
+        background: #64BD48;
+        border-radius: 8px;
+        display: block;
+        padding: 22px 13px;
+        max-width: 190px;
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 12px;
+        color: #ECF3FF;
+        cursor: pointer;
+        border: none;
+        transition: .3s;
+        border: 3px solid $color4;
+        &:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+    }
+}

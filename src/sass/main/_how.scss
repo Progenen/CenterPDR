@@ -1,0 +1,36 @@
+.how {
+
+    &__inner {
+        max-width: 1092px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__img {
+        margin-right: rem(70);
+        flex: 0 1 500px;
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50px;
+        }
+    }
+
+    &__text {
+        flex: 0 1 522px;
+    }
+
+    &__postitle {
+        text-align: left;
+    }
+
+    &__title {
+        margin: 40px 0;
+    }
+
+    &__descr {
+    }
+}

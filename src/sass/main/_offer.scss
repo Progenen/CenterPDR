@@ -1,0 +1,94 @@
+// Offer
+.offer {
+    background-image: url('../images/graphics/offer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: rem(77) 0 rem(270);
+    &__top {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: rem(80);
+        margin: 0;
+    }
+
+    &__subititle {
+        margin: 22px 0 0 0;
+    }
+
+    &__quality {
+        margin: rem(167) auto 0 auto;
+    }
+}
+.offer-quality {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    width: 100%;
+    padding: rem(127) 0 0 0;
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: "";
+        max-width: 1018px;
+        position: absolute;
+        height: 8px;
+        width: 100%;
+        background-image: url('../images/graphics/offer-line.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__item {
+        max-width: 330px;
+        background: rgba(28, 30, 37, 0.6);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 24px 30px 28px;
+        &::after {
+            content: "";    
+            position: absolute;
+            top: -115%;
+            height: 140%;
+            width: 8px;
+            background-image: url('../images/graphics/offer-item-line.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &:first-child::after {
+            left: 60px;
+        }
+        &:nth-child(2)::after {
+            margin-left: 4.9px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:last-child::after {
+            right: 61px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(16);
+        margin: 0 0 12px 0;
+        line-height: 32px;
+
+    }
+
+    &__descr {
+        margin: 0;
+        font-weight: 500;
+        color: #FFFFFF;
+        opacity: .8;
+        line-height: 26px;
+        font-size: 14px;
+
+    }
+}

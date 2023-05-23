@@ -63,21 +63,35 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollEvent();
     }
 
-    // Breadcrumbs link to h1
 
-    if (document.querySelector(".breadcrumbs")) {
-        const breadcrumbsList = document.querySelector(".breadcrumbs__list");
-        const breadcrumbsItems = document.querySelectorAll('.breadcrumbs__item');
-        const breadcrumbLast = breadcrumbsItems[breadcrumbsItems.length - 1];
-    
-        const newBreadcrumb = document.createElement('li');
-        breadcrumbLast.className.split(' ').forEach(element => newBreadcrumb.classList.add(element));
-        newBreadcrumb.innerHTML = `
-            <h1>
-                ${breadcrumbLast.innerText}
-            </h1>
-        `;
-        breadcrumbsList.append(newBreadcrumb);
+    // burger menu
+
+    if (window.innerWidth <= 1090) {
+        const menuBody = document.querySelector(".header__menu");
+        const menuBtn = document.querySelector(".header__burger");
+        const menuLinks = document.querySelectorAll(".header-menu__link");
+
+        document.body.append(menuBody);
+
+        menuBtn.addEventListener("click", () => {
+            document.body.classList.toggle("lock");
+            menuBtn.classList.toggle("active");
+            menuBody.classList.toggle("active");
+        });
+
+        menuLinks.forEach(element => {
+            element.addEventListener("click", () => {
+                document.body.classList.toggle("lock");
+                menuBtn.classList.toggle("active");
+                menuBody.classList.toggle("active");
+            })
+        });
     }
 
+    if (window.innerWidth <= 768) {
+        const menuBody = document.querySelector(".header__menu");
+        const menuPhone = document.querySelector(".header-contacts__phone");
+
+        menuBody.append(menuPhone);
+    }
 });

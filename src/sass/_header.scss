@@ -1,0 +1,139 @@
+.header {
+    padding: 55px 0;
+    &__container {
+        max-width: 1470px;
+    }
+
+    .row {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__col {
+
+        &--logo {
+            width: 22%;
+        }
+
+        &--menu {
+            width: 59.5%;
+            margin-right: rem(53);
+        }
+
+        &--contacts {
+            min-width: 269px;
+            width: 19.663%;
+        }
+
+        &--burger {
+            display: none;
+            margin-left: 15px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-top: 15px;
+    }
+
+    &__menu {
+    }
+
+    &__contacts {
+    }
+}
+.header-menu {
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0 0 0 auto;
+        width: fit-content;
+        padding: 0;
+    }
+
+    &__item {
+        margin: 0 45px 0 0;
+        position: relative;
+        padding: 18px 0 23px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $color4;
+            bottom: 0;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+        &.active {
+            .header-menu__link {
+                color: $color2;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 13px;
+        color: $color3;
+        text-decoration: none;
+        transition: .3s;
+        &:hover {
+            color: $color2;
+        }
+    }
+
+    &__burger {
+        display: none;
+    }
+}
+.header-contacts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__list {
+        margin: 0 30px 0 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 19px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link svg{
+        width: 17px;
+        height: 17px;
+        fill: $color3;
+    }
+
+    &__phone {
+        padding: 12.5px 20.5px;
+        border: 1.5px solid #ECF3FF;
+        border-radius: 8px;
+        font-weight: 700;
+        color: $color2;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        line-height: 13px;
+        transition: .3s;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
